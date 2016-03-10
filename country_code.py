@@ -22,7 +22,7 @@ class Country_Code(object):
         else:
             self._name = resource_filename('weather_underground', "mapping")
 
-        self._mapping =json.load(open(self.name))
+        self._mapping =json.load(open(self._name))
 
     @staticmethod            
     def get_country_iso_code(name):
