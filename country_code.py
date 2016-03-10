@@ -17,8 +17,8 @@ from wunderground_exceptions import *
 
 class Country_Code(object):
     def __init__(self,name = None):
-        if name:
-            self._name = _name
+        if not name:
+            self._name = name
         else:
             self._name = resource_filename('weather_underground', "mapping")
 
