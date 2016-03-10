@@ -20,7 +20,7 @@ class Country_Code(object):
         if name:
             self._name = _name
         else:
-            self._name = resource_filename(weather_underground, "mapping")
+            self._name = resource_filename('weather_underground', "mapping")
 
         self._mapping =json.load(open(self.name))
 

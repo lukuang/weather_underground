@@ -22,7 +22,7 @@ class Weather_info(Rest):
 
     @staticmethod
     def read_key():
-        key_file_path = resource_filename(weather_underground, "key")
+        key_file_path = resource_filename('weather_underground', "key")
         key = ""
         try:
             with open(key_file_path) as f:
