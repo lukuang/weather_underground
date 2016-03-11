@@ -42,7 +42,9 @@ class Weather_info(Rest):
             code = self.find_country_code(country)
             para['c'] = code
         content = self.call_api(para,end_point)
-        print content
+        #print content
+        return content
+
         # TODO: add utility to choose city, and then call the api to get forcast
 
 
@@ -50,13 +52,14 @@ class Weather_info(Rest):
     def get_10dayforcast_for_link(self,link):
         end_point = self._COMMON_END_POINT +'forecast10day/' + link + '.json'
         content = self.call_api({},end_point)
-        print content
+        return content
+        #print content
 
 
     def get_10dayforcast(self,country,city):
         end_point = self._COMMON_END_POINT +'forecast10day/q/' + country+'/'+city + '.json'
         content = self.call_api({},end_point)
-        print content
+        #print content
         return content
 
 
