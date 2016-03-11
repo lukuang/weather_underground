@@ -55,8 +55,9 @@ class Weather_info(Rest):
 
     def get_10dayforcast(self,country,city):
         end_point = self._COMMON_END_POINT +'forecast10day/q/' + country+'/'+city + '.json'
-        content = self.call_api(para,end_point)
+        content = self.call_api({},end_point)
         print content
+        return content
 
 
     # def get_forcast(self, ):
